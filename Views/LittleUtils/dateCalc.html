@@ -4,7 +4,7 @@
     }
 
     /*fromLeft*/
-    #animated_div {
+    .animated_div {
         width: 126px;
         height: 126px;
         background: #92B901;
@@ -424,7 +424,7 @@
     <div style="height:160px;"></div>
     <div class="row">
         <div class="col-lg-6">
-            <div class="" id="animated_div">
+            <div class="" id="animated_div" ng-class="{true:'animated_div',false:''}[leftOn]">
                 <h1>100</h1>
             </div>
         </div>

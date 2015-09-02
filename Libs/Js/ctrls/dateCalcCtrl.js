@@ -3,11 +3,21 @@
     $scope.calc = function () {
         var beginDateValue = new Date($scope.baseObj.beginDate).valueOf();
         var resultDate = new Date(beginDateValue + $scope.baseObj.addDays * 24 * 60 * 60 * 1000);
-        $scope.baseObj.resultDay = resultDate.getFullYear() + "-" + (resultDate.getMonth() + 1) + "-" + resultDate.getDate();
+        $scope.baseObj.resultDay = resultDate.getFullYear() + "-" + (resultDate.getUTCMonth() + 1) + "-" + resultDate.getDate();
+
+        $scope.leftOn = false;
+        if ($scope.baseObj.resultDay == '2015-9-23') {
+            setTimeout(function () {
+                $scope.leftOn = true;
+            },3000);
+        }
     }
 
+
+
     //overLay
-    $scope.overLay = { visibility: 'visible' };
+    //$scope.overLay = { visibility: 'visible' };
+    $scope.overLay = { visibility: 'hidden' };
     $scope.openOverLay = function () {
         $scope.overLay = { visibility: 'hidden' };
     }
