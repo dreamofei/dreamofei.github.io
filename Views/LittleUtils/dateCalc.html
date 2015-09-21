@@ -2,6 +2,349 @@
     input, button {
         margin: 5px;
     }
+
+    /*fromLeft*/
+    #animated_div {
+        width: 126px;
+        height: 126px;
+        background: #92B901;
+        color: #ffffff;
+        text-align:center;
+        position: relative;
+        padding: 20px 10px 0px 10px;
+        animation: animated_div 5s 1 forwards;
+        -moz-animation: animated_div 5s 1 forwards;
+        -webkit-animation: animated_div 5s 1 forwards;
+        -o-animation: animated_div 5s 1 forwards;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+    }
+
+    @keyframes animated_div {
+        0% {
+            transform: rotate(0deg);
+            left: 5%;
+        }
+
+        25% {
+            transform: rotate(20deg);
+            left: 5%;
+        }
+
+        50% {
+            transform: rotate(0deg);
+            left: 95%;
+        }
+
+        55% {
+            transform: rotate(0deg);
+            left: 95%;
+        }
+
+        70% {
+            transform: rotate(0deg);
+            left: 95%;
+            /*background: #1ec7e6;*/
+            background: #ff0000;
+        }
+
+        100% {
+            transform: rotate(-360deg);
+            left: calc(50% - 60px);
+        }
+    }
+
+    @-webkit-keyframes animated_div {
+        0% {
+            -webkit-transform: rotate(0deg);
+            left: 5%;
+        }
+
+        25% {
+            -webkit-transform: rotate(20deg);
+            left: 5%;
+        }
+
+        50% {
+            -webkit-transform: rotate(0deg);
+            left: 95%;
+        }
+
+        55% {
+            -webkit-transform: rotate(0deg);
+            left: 95%;
+        }
+
+        70% {
+            -webkit-transform: rotate(0deg);
+            left: 95%;
+            /*background: #1ec7e6;*/
+            background: #ff0000;
+        }
+
+        100% {
+            -webkit-transform: rotate(-360deg);
+            left: -webkit-calc(50% - 60px);
+        }
+    }
+
+    @-moz-keyframes animated_div {
+        0% {
+            -moz-transform: rotate(0deg);
+            left: 5%;
+        }
+
+        25% {
+            -moz-transform: rotate(20deg);
+            left: 5%;
+        }
+
+        50% {
+            -moz-transform: rotate(0deg);
+            left: 95%;
+        }
+
+        55% {
+            -moz-transform: rotate(0deg);
+            left: 95%;
+        }
+
+        70% {
+            -moz-transform: rotate(0deg);
+            left: 95%;
+            /*background: #1ec7e6;*/
+            background: #ff0000;
+        }
+
+        100% {
+            -moz-transform: rotate(-360deg);
+            left: -moz-calc(50% - 60px);
+        }
+    }
+    /*End fromLeft*/
+
+    /*fromRight*/
+    #animated_divR {
+        width: 126px;
+        height: 126px;
+        background: #92B901;
+        color: #ffffff;
+        text-align: center;
+        position: relative;
+        padding: 20px 10px 0px 10px;
+        animation: animated_divR 5s 1 forwards;
+        -moz-animation: animated_divR 5s 1 forwards;
+        -webkit-animation: animated_divR 5s 1 forwards;
+        -o-animation: animated_divR 5s 1 forwards;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+    }
+
+    @keyframes animated_divR {
+        0% {
+            transform: rotate(0deg);
+            left: 80%;
+        }
+
+        25% {
+            transform: rotate(-20deg);
+            left: 80%;
+        }
+
+        50% {
+            transform: rotate(0deg);
+            left: -9%;
+        }
+
+        55% {
+            transform: rotate(0deg);
+            left: -9%;
+        }
+
+        70% {
+            transform: rotate(0deg);
+            left: -9%;
+            background: #1ec7e6;
+        }
+
+        100% {
+            transform: rotate(360deg);
+            left: calc(50% - 60px);
+        }
+    }
+
+    @-webkit-keyframes animated_divR {
+        0% {
+            -webkit-transform: rotate(0deg);
+            left: 80%;
+        }
+
+        25% {
+            -webkit-transform: rotate(-20deg);
+            left: 80%;
+        }
+
+        50% {
+            -webkit-transform: rotate(0deg);
+            left: -9%;
+        }
+
+        55% {
+            -webkit-transform: rotate(0deg);
+            left: -9%;
+        }
+
+        70% {
+            -webkit-transform: rotate(0deg);
+            left: -9%;
+            background: #1ec7e6;
+        }
+
+        100% {
+            -webkit-transform: rotate(360deg);
+            left: -webkit-calc(50% - 60px);
+        }
+    }
+
+    @-moz-keyframes animated_divR {
+        0% {
+            -moz-transform: rotate(0deg);
+            left: 80%;
+        }
+
+        25% {
+            -moz-transform: rotate(-20deg);
+            left: 80%;
+        }
+
+        50% {
+            -moz-transform: rotate(0deg);
+            left: -9%;
+        }
+
+        55% {
+            -moz-transform: rotate(0deg);
+            left: -9%;
+        }
+
+        70% {
+            -moz-transform: rotate(0deg);
+            left: -9%;
+            background: #1ec7e6;
+        }
+
+        100% {
+            -moz-transform: rotate(360deg);
+            left: -moz-calc(50% - 60px);
+        }
+    }
+    /*End fromRight*/
+
+    #centerModel {
+        text-align: center;
+        /*background-color: gray;*/
+        position: relative;
+        /*z-index: 1000;*/
+        animation: modelFly 5s 1 forwards;
+        -moz-animation: modelFly 5s 1 forwards;
+        -webkit-animation: modelFly 5s 1 forwards;
+        -o-animation: modelFly 5s 1 forwards;
+    }
+    #centerImg
+    {
+        width:126px;
+        height:126px;
+        margin-left:auto;
+        margin-right:auto;
+        background-color:#0094ff;
+        border-radius:6px;
+    }
+    #centerFont {
+        margin-top:60px;
+        /*background-color: #00ffff;*/
+    }
+
+    /*centerModel动画*/
+    @keyframes modelFly {
+        from {
+            top:100px;
+            opacity:0;
+        }
+
+        to {
+            top:-120px;
+            opacity:1;
+        }
+    }
+
+    @-moz-keyframes modelFly /* Firefox */
+    {
+        from {
+            top: 100px;
+            opacity: 0;
+        }
+
+        to {
+            top: -120px;
+            opacity: 1;
+        }
+    }
+
+    @-webkit-keyframes modelFly /* Safari 和 Chrome */
+    {
+        from {
+            top: 100px;
+            opacity: 0;
+        }
+
+        to {
+            top: -120px;
+            opacity: 1;
+        }
+    }
+    /*End centerModel动画*/
+
+    /*centerImg动画*/
+    .centerImgHover:hover {
+        animation: modelTurnaround 1s 1;
+        -moz-animation: modelTurnaround 1s 1;
+        -webkit-animation: modelTurnaround 1s 1;
+        -o-animation: modelTurnaround 1s 1;
+    }
+    @keyframes modelTurnaround {
+        from {
+            transform: rotateY(0deg);
+        }
+
+        to {
+            transform: rotateY(180deg);
+        }
+    }
+
+    @-moz-keyframes modelTurnaround /* Firefox */
+    {
+        from {
+            -moz-transform: rotateY(0deg);
+        }
+
+        to {
+            -moz-transform: rotateY(180deg);
+        }
+    }
+
+    @-webkit-keyframes modelTurnaround /* Safari 和 Chrome */
+    {
+        from {
+            -webkit-transform: rotateY(0deg);
+        }
+
+        to {
+            -webkit-transform: rotateY(180deg);
+        }
+    }
+    /*End centerImg动画*/
+
+   
 </style>
 <div ng-controller="dateCalcCtrl">
     <div class="row">
@@ -14,6 +357,30 @@
             <button class="btn btn-block btn-info" ng-click="calc()">计算</button>
             <input placeholder="计算后日期" ng-model="baseObj.resultDay" class="form-control" />
         </div>
+    </div>
+    <div style="height:160px;"></div>
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="" id="animated_div">
+                <h1>100</h1>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="" id="animated_divR">
+                <h1>200</h1>
+            </div>
+        </div>
+        
+        <div class="row" id="centerModel">
+            <div id="centerImg" class="centerImgHover">
+
+            </div>
+            <div id="centerFont">
+                <h1>字字字字字字</h1>
+            </div>
+
+        </div>
+
     </div>
 
 </div>

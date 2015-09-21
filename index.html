@@ -9,6 +9,7 @@
     <script src="Libs/Js/app.js"></script>
     <script src="Libs/Js/ctrls/mainCtrl.js"></script>
     <script src="Libs/Js/ctrls/dateCalcCtrl.js"></script>
+    <script src="Libs/Js/ctrls/ctrls.js"></script>
 
     <link href="Libs/Css/bootstrap3/bootstrap.css" rel="stylesheet" />
     <link href="Libs/Css/WebFont/awesome-4.1.0/font-awesome.css" rel="stylesheet" />
@@ -16,7 +17,7 @@
 </head>
 <body ng-app="mainApp" style="font-family:'Microsoft YaHei';overflow-x:hidden">
     <div class="container-fluid">
-        <div class="row">
+        <div class="row" ng-controller="navbarCtrl">
             <nav class="navbar navbar-inverse">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
@@ -26,7 +27,7 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="">开发中..</a></li>
+                        <li><a href="">开发中..</a></li>
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">
