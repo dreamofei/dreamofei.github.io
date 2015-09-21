@@ -3,8 +3,11 @@
     .when('/', {
         templateUrl: 'Views/main.html'
     })
-    .when('', {
-        templateUrl: ''
+    .when('/littleUtils', {
+        templateUrl: 'Views/mainOfLittleUtils.html'
+    })
+    .when('/littleUtils/dateCalc', {
+        templateUrl: 'Views/LittleUtils/dateCalc.html'
     })
     .otherwise({
         redirectTo: '/'
