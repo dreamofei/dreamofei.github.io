@@ -1,4 +1,4 @@
-﻿mainMoudle.controller('dateCalcCtrl', function ($scope) {
+﻿mainMoudle.controller('dateCalcCtrl', function ($scope, $timeout) {
     var baseObj = new Object();
     $scope.calc = function () {
         var beginDateValue = new Date($scope.baseObj.beginDate).valueOf();
@@ -6,10 +6,13 @@
         $scope.baseObj.resultDay = resultDate.getFullYear() + "-" + (resultDate.getUTCMonth() + 1) + "-" + resultDate.getDate();
 
         $scope.leftOn = false;
+        $scope.openLeftOn = function () {
+            $scope.leftOn = true;
+        }
         if ($scope.baseObj.resultDay == '2015-9-23') {
-            setTimeout(function () {
-                $scope.leftOn = true;
-            },3000);
+            //setTimeout($scope.$apply($scope.openLeftOn), 1000);
+            //$scope.openLeftOn();
+            $timeout($scope.openLeftOn,3000);
         }
     }
 
