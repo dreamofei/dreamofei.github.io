@@ -44,8 +44,8 @@
         70% {
             transform: rotate(0deg);
             left: 95%;
-            /*background: #1ec7e6;*/
-            background: #ff0000;
+            background: #1ec7e6;
+            /*background: #ff0000;*/
         }
 
         100% {
@@ -78,8 +78,7 @@
         70% {
             -webkit-transform: rotate(0deg);
             left: 95%;
-            /*background: #1ec7e6;*/
-            background: #ff0000;
+            background: #1ec7e6;
         }
 
         100% {
@@ -112,8 +111,7 @@
         70% {
             -moz-transform: rotate(0deg);
             left: 95%;
-            /*background: #1ec7e6;*/
-            background: #ff0000;
+            background: #1ec7e6;
         }
 
         100% {
@@ -124,7 +122,7 @@
     /*End fromLeft*/
 
     /*fromRight*/
-    #animated_divR {
+    .animated_divR {
         width: 126px;
         height: 126px;
         background: #92B901;
@@ -240,7 +238,7 @@
     }
     /*End fromRight*/
 
-    #centerModel {
+    .centerModel {
         text-align: center;
         /*background-color: gray;*/
         position: relative;
@@ -258,7 +256,7 @@
         margin-right: auto;
         background-color: #0094ff;
         border-radius: 6px;
-        background-image: url(../../Sources/imgs/1003.jpg);
+        background-image: url(../../Sources/imgs/c1.jpg);
         /*background-repeat:round;*/
         background-size: cover;
 
@@ -316,7 +314,7 @@
     #centerImg:hover {
         width: 200px;
         height: 200px;
-        background-image: url(../../Sources/imgs/1004.jpg);
+        background-image: url(../../Sources/imgs/c2.jpg);
         transform: rotateY(180deg);
         -moz-transform: rotateY(180deg);
         -webkit-transform: rotateY(180deg);
@@ -330,7 +328,9 @@
         height: 100%;
         top: 0;
         left: 0;
-        background: rgba(153,204,51,0.9);
+        /*background: rgba(153,204,51,0.9);*/
+        /*background: rgba(157,152,149,0.9);*/
+        background: rgba(0,0,0,0.9);
     }
     /*End 全屏遮罩*/
 
@@ -345,11 +345,16 @@
 
         50% {
             opacity: 1;
-            transform: rotate(1080deg);
+            transform: rotate(360deg);
         }
 
+        /*75% {
+            opacity: 1;
+            transform: translate(10px,0px);
+        }*/
+
         100% {
-            transform: rotate(0deg) translate(100px,0px);
+            transform: rotate(0deg) translate(20px,0px);
             opacity: 0;
             bottom: 0;
         }
@@ -364,11 +369,16 @@
 
         50% {
             opacity: 1;
-            -webkit-transform: rotate(1080deg);
+            -webkit-transform: rotate(360deg);
         }
 
+        /*75% {
+            opacity: 1;
+            -webkit-transform: translate(10px,0px);
+        }*/
+
         100% {
-            -webkit-transform: rotate(0deg) translate(100px,0px);
+            -webkit-transform: rotate(0deg) translate(20px,0px);
             opacity: 0;
             bottom: 0;
         }
@@ -383,11 +393,16 @@
 
         50% {
             opacity: 1;
-            -moz-transform: rotate(1080deg);
+            -moz-transform: rotate(360deg);
         }
 
+        /*75% {
+            opacity: 1;
+             -moz-transform: translate(10px,0px);
+        }*/
+
         100% {
-            -moz-transform: rotate(0deg) translate(100px,0px);
+            -moz-transform: rotate(0deg) translate(20px,0px);
             opacity: 0;
             bottom: 0;
         }
@@ -401,7 +416,7 @@
         -moz-animation: beautyRose 5s;
         -ms-animation: beautyRose 5s;
         -o-animation: beautyRose 5s;
-        height: 80px;
+        height: 36px;
     }
     .aRoseDiv {
         position: fixed;
@@ -415,8 +430,8 @@
         </div>
         <div class="col-lg-6">
             <h4 class="text-center">日期推算</h4>
-            <input placeholder="输入开始日期（格式：2015-06-15）" ng-model="baseObj.beginDate" class="form-control" ng-init="baseObj.beginDate=''" />
-            <input placeholder="增加的天数（负数表示向前推）" ng-model="baseObj.addDays" ng-init="baseObj.addDays=''" class="form-control" />
+            <input placeholder="输入开始日期（格式：2015-06-15）" ng-model="baseObj.beginDate" class="form-control" ng-init="baseObj.beginDate='2015-06-15'" />
+            <input placeholder="增加的天数（负数表示向前推）" ng-model="baseObj.addDays" ng-init="baseObj.addDays='100'" class="form-control" />
             <button class="btn btn-block btn-info" ng-click="calc()">计算</button>
             <input placeholder="计算后日期" ng-model="baseObj.resultDay" class="form-control" />
         </div>
@@ -424,22 +439,24 @@
     <div style="height:160px;"></div>
     <div class="row">
         <div class="col-lg-6">
-            <div class="" id="animated_div" ng-class="{true:'animated_div',false:''}[leftOn]">
-                <h1>100</h1>
+            <div class="" id="animated_div" ng-class="{true:'animated_div',false:''}[LROn]" ng-style="LRIsShow">
+                <i class="fa fa-smile-o fa-2x"></i>
+                <i class="fa fa-heart fa-5x"></i>
             </div>
         </div>
         <div class="col-lg-6">
-            <div class="" id="animated_divR">
-                <h1>200</h1>
+            <div class="" id="animated_divR" ng-class="{true:'animated_divR',false:''}[LROn]" ng-style="LRIsShow">
+                <i class="fa fa-heart fa-5x"></i>
+                <i class="fa fa-female fa-2x"></i>
             </div>
         </div>
 
-        <div class="row" id="centerModel">
+        <div class="row" id="centerModel" ng-class="{true:'centerModel',false:''}[CenterOn]" ng-style="CenterIsShow">
             <div id="centerImg" class="centerImgHover">
 
             </div>
             <div id="centerFont">
-                <h1>字字字字字字</h1>
+                <h1>100天咯~我们要开心，幸福~(●'◡'●)</h1>
             </div>
 
         </div>
@@ -447,8 +464,8 @@
     </div>
 
     <div class="overlay" ng-style="overLay" id="roseZone">
-        <button class="btn btn-default" ng-click="openOverLay()">close</button>
-        <button class="btn btn-default" ng-click="beginRose()">begin</button>
+        <!--<button class="btn btn-default" ng-click="openOverLay()">close</button>
+        <button class="btn btn-default" ng-click="beginRose()">begin</button>-->
     </div>
 
 </div>
