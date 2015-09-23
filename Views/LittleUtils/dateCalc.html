@@ -423,6 +423,15 @@
     }
     /*End 飘落动画*/
 
+    .seeRoseRain {
+        cursor: pointer;
+    }
+    .seeRoseRain:hover {
+        cursor: pointer;
+        font-size: larger;
+        color: #950e11;
+    }
+
 </style>
 <div ng-controller="dateCalcCtrl">
     <div class="row">
@@ -430,8 +439,8 @@
         </div>
         <div class="col-lg-6">
             <h4 class="text-center">日期推算</h4>
-            <input placeholder="输入开始日期（格式：2015-06-15）" ng-model="baseObj.beginDate" class="form-control" ng-init="baseObj.beginDate='2015-06-15'" />
-            <input placeholder="增加的天数（负数表示向前推）" ng-model="baseObj.addDays" ng-init="baseObj.addDays='100'" class="form-control" />
+            <input placeholder="输入开始日期（格式：2015-06-15）" ng-model="baseObj.beginDate" class="form-control" ng-init="baseObj.beginDate=''" />
+            <input placeholder="增加的天数（负数表示向前推）" ng-model="baseObj.addDays" ng-init="baseObj.addDays=''" class="form-control" />
             <button class="btn btn-block btn-info" ng-click="calc()">计算</button>
             <input placeholder="计算后日期" ng-model="baseObj.resultDay" class="form-control" />
         </div>
@@ -457,15 +466,15 @@
             </div>
             <div id="centerFont">
                 <h1>100天咯~我们要开心，幸福~(●'◡'●)</h1>
+                <i class="fa fa-play-circle seeRoseRain" ng-click="showRoseRain()"> 观看玫瑰雨</i>
             </div>
 
         </div>
 
     </div>
 
-    <div class="overlay" ng-style="overLay" id="roseZone">
-        <!--<button class="btn btn-default" ng-click="openOverLay()">close</button>
-        <button class="btn btn-default" ng-click="beginRose()">begin</button>-->
+    <div class="overlay" ng-style="overLay" id="roseZone" ng-dblclick="hiddenRoseRain()">
+        <!--<button class="btn btn-default" ng-click="openOverLay()">close</button>-->
     </div>
 
 </div>

@@ -29,6 +29,17 @@
         //End 动画相关
     }
 
+    // 放映/停止玫瑰雨
+    $scope.showRoseRain = function () {
+        $scope.overLay = { visibility: 'visible' };
+    }
+    $scope.hiddenRoseRain = function () {
+        $scope.overLay = { visibility: 'hidden' };
+    }
+    // End 放映/停止玫瑰雨
+
+
+
 
     //overLay
     //$scope.overLay = { visibility: 'visible' };
