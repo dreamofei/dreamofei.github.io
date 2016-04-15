@@ -1,0 +1,15 @@
+﻿<div class="col-md-12" ng-controller="base64CodeCtrl">
+    <div class="row">
+        <div class="col-md-5">
+            <textarea style="height:360px;" class="form-control" placeholder="输入数据..." ng-model="originalData"></textarea>
+        </div>
+        <div class="col-md-2">
+            <button ng-click="encodeBase64(1)" style="margin-top:120px;margin-bottom:10px;" class="btn btn-info form-control">Encode</button>
+            <button ng-click="encodeBase64(2)" style="margin-bottom:10px;" class="btn btn-success form-control">Decode</button>
+            <button ng-click="clear()" class="btn btn-danger form-control">清空</button>
+        </div>
+        <div class="col-md-5">
+            <textarea style="height:360px;" class="form-control" placeholder="结果会显示在这里..." ng-model="resultData"></textarea>
+        </div>
+    </div>
+</div>

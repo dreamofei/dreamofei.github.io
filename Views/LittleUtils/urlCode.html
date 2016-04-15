@@ -1,0 +1,15 @@
+﻿<div class="col-md-12" ng-controller="urlCodeCtrl">
+    <div class="row">
+        <div class="col-md-5">
+            <textarea style="height:360px;" class="form-control" placeholder="输入要转化的URL..." ng-model="originalData"></textarea>
+        </div>
+        <div class="col-md-2">
+            <button ng-click="encodeUrl(1)" style="margin-top:120px;margin-bottom:10px;" class="btn btn-info form-control">EncodeUrl</button>
+            <button ng-click="encodeUrl(2)" style="margin-bottom:10px;" class="btn btn-success form-control">DecodeUrl</button>
+            <button ng-click="clear()" class="btn btn-danger form-control">清空</button>
+        </div>
+        <div class="col-md-5">
+            <textarea style="height:360px;" class="form-control" placeholder="结果会显示在这里..." ng-model="resultData"></textarea>
+        </div>
+    </div>
+</div>
